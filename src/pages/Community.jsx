@@ -3,11 +3,18 @@ import { Users, MessageCircle, Calendar, Globe } from 'lucide-react';
 
 export default function Community() {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-purple-900 to-blue-800 text-white py-20">
+      <div className="bg-gradient-to-br from-purple-900 via-purple-700 to-blue-800  py-20 px-4 md:px-8 relative text-white">
+      <div className="absolute inset-0 opacity-45" style={{
+            backgroundImage: "url('/assets/img/women2.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}></div>
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <br />
+            <br />
             Join Our Global Community
           </h1>
           <p className="text-xl text-purple-100 max-w-2xl">
