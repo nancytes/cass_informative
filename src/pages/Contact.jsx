@@ -44,7 +44,7 @@ export default function Contact() {
       </div>
 
       {/* Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Information */}
@@ -178,7 +178,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-purple-50">
+      {/* <section className="py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Visit Our Office</h2>
           <div className="h-96 bg-gray-200 rounded-lg overflow-hidden">
@@ -192,7 +192,7 @@ export default function Contact() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
