@@ -37,8 +37,9 @@ export default function Header() {
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center space-x-2 z-50">
-            <Sparkles className={`w-8 h-8 ${isScrolled ? 'text-brand-purple' : 'text-white'}`} />
+          <Link to="/" className="flex items-center z-50">
+          <img src="/assets/img/logocass.png" alt="" className='w-12 h-12'/>
+         
             <span className={`text-2xl font-bold ${
               isScrolled ? 'text-gradient' : 'text-white'
             }`}>

@@ -57,10 +57,11 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Email</h3>
-                    <p className="text-gray-600">info@cassiopeia.edu</p>
-                    <p className="text-gray-600">support@cassiopeia.edu</p>
+                    <p className="text-gray-600">membership@cassiopeiatech.org</p>
+                    {/* <p className="text-gray-600">support@cassiopeia.edu</p> */}
                   </div>
                 </div>
+                <br />
 
                 <div className="flex items-start space-x-4">
                   <div className="bg-purple-100 p-3 rounded-lg">
@@ -68,12 +69,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">Phone</h3>
-                    <p className="text-gray-600">+1 (234) 567-890</p>
-                    <p className="text-gray-600">+1 (234) 567-891</p>
+                    <p className="text-gray-600">+251 (969) 870-922</p>
+                    {/* <p className="text-gray-600">+1 (234) 567-891</p> */}
                   </div>
                 </div>
+                <br />
 
-                <div className="flex items-start space-x-4">
+                {/* <div className="flex items-start space-x-4">
                   <div className="bg-purple-100 p-3 rounded-lg">
                     <MapPin className="w-6 h-6 text-purple-600" />
                   </div>
@@ -85,7 +87,7 @@ export default function Contact() {
                       San Francisco, CA 94105
                     </p>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start space-x-4">
                   <div className="bg-purple-100 p-3 rounded-lg">
