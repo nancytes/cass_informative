@@ -24,7 +24,7 @@ export default function Community() {
       </div>
 
       {/* Community Features */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-purple-50 rounded-lg p-8">
@@ -57,7 +57,7 @@ export default function Community() {
       </section>
 
       {/* Events Section */}
-      <section className="py-20 bg-purple-50">
+      <section className="py-20 bg-purple-50 px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Upcoming Events</h2>
           

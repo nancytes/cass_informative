@@ -50,7 +50,7 @@ export default function Programs() {
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-purple-900 via-purple-700 to-blue-800  py-20 px-4 md:px-8 relative text-white">
+      <div className="bg-gradient-to-br from-purple-900 via-purple-700 to-blue-800  py-20 px-4 md:px-8 relative text-white ">
       <div className="absolute inset-0 opacity-45" style={{
             backgroundImage: "url('/assets/img/women2.jpg')",
             backgroundSize: 'cover',
@@ -70,7 +70,7 @@ export default function Programs() {
       </div>
 
       {/* Programs Grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programs.map((program, index) => (
@@ -91,7 +91,7 @@ export default function Programs() {
       </section>
 
       {/* Learning Approach */}
-      <section className="py-20 bg-purple-50">
+      <section className="py-20 bg-purple-50 px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Our Learning Approach</h2>
           

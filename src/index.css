@@ -41,7 +41,17 @@ body {
 .fade-in {
   animation: fadeIn 0.5s ease-in;
 }
+.gradient-text{
+  background: linear-gradient(90deg, #FF10A9, #9A5CFF, #00C4FF);
 
+}
+.gradient-border::before{
+  background: linear-gradient(45deg, #FF10A9, #9A5CFF, #00C4FF);
+}
+.hero-gradient{
+  background: linear-gradient(135deg, #FF10A9 0%, #9A5CFF 50%, #00C4FF 100%);
+
+}
 .slide-up {
   animation: slideUp 0.5s ease-out;
 }

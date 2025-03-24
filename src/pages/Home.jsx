@@ -30,13 +30,14 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white"> 
+
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Why Choose Cassiopeia?</h2>
           
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 ">
                 <Code className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Technical Excellence</h3>
