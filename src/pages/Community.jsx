@@ -9,25 +9,25 @@ import {
 export default function Community() {
   const upcomingEvents = [
     {
-      date: "MAR 15, 2025",
+      //date: "MAR 15, 2025",
       title: "Tech Leadership Workshop",
       description: "Virtual workshop on developing leadership skills in tech.",
       type: "Virtual",
-      time: "10:00 AM - 2:00 PM PST"
+      //time: "10:00 AM - 2:00 PM PST"
     },
     {
-      date: "MAR 22, 2025",
+     // date: "MAR 22, 2025",
       title: "Code Review Session",
       description: "Peer code review and best practices discussion.",
       type: "Online",
-      time: "1:00 PM - 3:00 PM PST"
+      //time: "1:00 PM - 3:00 PM PST"
     },
     {
-      date: "MAR 29, 2025",
+     // date: "MAR 29, 2025",
       title: "Career Fair",
       description: "Virtual networking event with top tech companies.",
       type: "Virtual",
-      time: "9:00 AM - 5:00 PM PST"
+      //time: "9:00 AM - 5:00 PM PST"
     }
   ];
 
@@ -35,19 +35,19 @@ export default function Community() {
     {
       icon: <Code className="w-6 h-6" />,
       name: "Web Development",
-      members: "2,500+",
+      //members: "2,500+",
       description: "Connect with fellow web developers, share knowledge, and collaborate on projects."
     },
     {
       icon: <Database className="w-6 h-6" />,
       name: "Data Science",
-      members: "1,800+",
+      //members: "1,800+",
       description: "Discuss data analysis, machine learning, and AI with passionate data scientists."
     },
     {
       icon: <Cloud className="w-6 h-6" />,
       name: "Cloud Computing",
-      members: "1,500+",
+      //members: "1,500+",
       description: "Exchange cloud architecture best practices and stay updated with latest trends."
     }
   ];
@@ -82,17 +82,17 @@ export default function Community() {
                   Be part of a movement that's transforming the tech industry.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-8">
-                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  {/* <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                     <Users className="w-5 h-5 text-brand-pink" />
-                    <span className="font-medium">10,000+ Members</span>
-                  </div>
-                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                    <span className="font-medium">Members</span>
+                  </div> */}
+                  {/* <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                     <Globe className="w-5 h-5 text-brand-blue" />
-                    <span className="font-medium">50+ Countries</span>
-                  </div>
+                    <span className="font-medium">50+ courses</span>
+                  </div> */}
                   <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                     <Heart className="w-5 h-5 text-brand-purple" />
-                    <span className="font-medium">500+ Mentors</span>
+                    <span className="font-medium">50+ Mentors</span>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-4">
@@ -246,21 +246,21 @@ export default function Community() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
               <div className="text-4xl font-bold mb-2">50+</div>
-              <div className="text-lg">Countries</div>
+              <div className="text-lg">courses</div>
             </div>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
-              <div className="text-4xl font-bold mb-2">10k+</div>
+              <div className="text-4xl font-bold mb-2">100+</div>
               <div className="text-lg">Active Members</div>
             </div>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
-              <div className="text-4xl font-bold mb-2">500+</div>
+              <div className="text-4xl font-bold mb-2">50+</div>
               <div className="text-lg">Mentors</div>
             </div>
             
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
-              <div className="text-4xl font-bold mb-2">1000+</div>
+              <div className="text-4xl font-bold mb-2">10+</div>
               <div className="text-lg">Events Hosted</div>
             </div>
           </div>

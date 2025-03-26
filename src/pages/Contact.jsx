@@ -56,7 +56,7 @@ export default function Contact() {
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                   <Users className="w-5 h-5 text-brand-blue" />
-                  <span className="font-medium text-white">5000+ Women Empowered</span>
+                  <span className="font-medium text-white">500+ Women Empower</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                   <Globe className="w-5 h-5 text-brand-pink" />
@@ -90,7 +90,7 @@ export default function Contact() {
                       <h3 className="font-semibold text-gray-800 mb-1">Email Us</h3>
                       <p className="text-gray-600 mb-2">We typically respond within 24 hours</p>
                       <a href="mailto:membership@cassiopeiatech.org" className="text-brand-purple hover:text-brand-pink transition-colors">
-                      membership@cassiopeiatech.org
+                      info@cassiopeiatech.org
                       </a>
                       <br />
                       {/* <a href="mailto:support@cassiopeia.edu" className="text-brand-purple hover:text-brand-pink transition-colors">
@@ -107,6 +107,7 @@ export default function Contact() {
                       <h3 className="font-semibold text-gray-800 mb-1">Call Us</h3>
                       <p className="text-gray-600 mb-2">Available Monday through Friday</p>
                       <p className="text-brand-purple">+251 (969) 870-922</p>
+                      <p className="text-brand-purple">+251 (962) 042-225</p>
                       
                     </div>
                   </div>
@@ -130,13 +131,13 @@ export default function Contact() {
                     <div className="bg-gradient-to-br from-brand-pink to-brand-purple p-3 rounded-lg">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
-                    <div>
+                    {/* <div>
                       <h3 className="font-semibold text-gray-800 mb-1">Office Hours</h3>
                       <p className="text-gray-600 mb-2">Visit us during these hours</p>
                       <p className="text-gray-700">Monday - Friday: 9:00 AM - 6:00 PM</p>
                       <p className="text-gray-700">Saturday: 10:00 AM - 4:00 PM</p>
                       <p className="text-gray-700">Sunday: Closed</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
 
@@ -148,15 +149,15 @@ export default function Contact() {
                       <GraduationCap className="w-5 h-5" />
                       <span>Programs</span>
                     </a>
-                    <a href="#" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
+                    <a href="/Community" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
                       <Users className="w-5 h-5" />
                       <span>Community</span>
                     </a>
-                    <a href="#" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
+                    <a href="/Programs" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
                       <Building2 className="w-5 h-5" />
                       <span>Careers</span>
                     </a>
-                    <a href="#" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
+                    <a href="/Contact" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
                       <Briefcase className="w-5 h-5" />
                       <span>Partners</span>
                     </a>
@@ -304,10 +305,10 @@ export default function Contact() {
               </div>
 
               {/* Additional Info Box */}
-              <div className="mt-8 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue p-8 rounded-2xl text-white">
+              {/* <div className="mt-8 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue p-8 rounded-2xl text-white">
                 <div className="flex items-start space-x-4">
                   <MessageSquare className="w-8 h-8 flex-shrink-0" />
-                  <div>
+                  {/* <div>
                     <h3 className="text-xl font-semibold mb-2">Need Immediate Assistance?</h3>
                     <p className="mb-4">
                       Our support team is available for live chat during business hours. 
@@ -316,9 +317,9 @@ export default function Contact() {
                     <button className="bg-white text-brand-purple px-6 py-2 rounded-lg hover:bg-opacity-90 transition-colors duration-200">
                       Start Live Chat
                     </button>
-                  </div>
+                  </div> 
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

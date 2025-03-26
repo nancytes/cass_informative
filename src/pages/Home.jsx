@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Code,
@@ -20,33 +21,33 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const successStories = [
+ const successStories = [
     {
-      name: "Sarah Chen",
-      role: "Senior Software Engineer at Google",
+      name: "Ada Lovelace ",
+      role: " (1815–1852) The First Computer Programmer",
       image:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
+        "../assets/img/ada.jpg",
       quote:
-        "Cassiopeia transformed my career. The supportive community and practical learning approach helped me land my dream job as a senior developer. The mentorship I received was invaluable.",
-      company: "google.com",
+        "Known for her work on Charles Babbage’s Analytical Engine. She wrote the first algorithm and envisioned computers doing more than calculations laying the foundation for modern computing.",
+      
     },
     {
-      name: "Maria Rodriguez",
-      role: "Tech Lead at Microsoft",
+      name: "Radia Perlman",
+      role: "(born 1951)Mother of the Internet",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
+        "../assets/img/radia.png",
       quote:
-        "The mentorship and networking opportunities at Cassiopeia were invaluable. I found my voice and confidence in tech leadership. The hands-on projects prepared me for real-world challenges.",
-      company: "microsoft.com",
+        "Invented the Spanning Tree Protocol (STP) which made large scale networking possible. Her contributions shaped how the internet functions today. ",
+    
     },
     {
-      name: "Emily Zhang",
-      role: "AI Research Engineer at OpenAI",
+      name: "Reshma Saujani",
+      role: "(born 1975)Founder of Girls Who Code",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80",
+        "../assets/img/rashma.png",
       quote:
-        "The AI & Machine Learning program at Cassiopeia gave me the perfect foundation to pursue my passion in artificial intelligence. The curriculum was cutting-edge and practical.",
-      company: "openai.com",
+        "A nonprofit working to close the gender gap in tech. She has empowered millions of girls to learn coding and pursue careers in technology.",
+     
     },
   ];
 
@@ -123,7 +124,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
                   <Users className="w-5 h-5 text-brand-blue" />
-                  <span>5000+ Graduates</span>
+                  <span>500+ Students</span>
                 </div>
                 <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
                   <Globe className="w-5 h-5 text-brand-purple" />
@@ -135,9 +136,11 @@ export default function Home() {
                   <span>Explore Programs</span>
                   <ArrowRight className="w-5 h-5" />
                 </button>
+                <Link to="/Contact">
                 <button className="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition duration-300">
                   Join Community
                 </button>
+                </Link>
               </div>
             </div>
             <div className="hidden md:block">
@@ -187,9 +190,9 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
               <div className="text-4xl font-bold mb-2 text-brand-pink">
-                5000+
+                500+
               </div>
-              <div className="text-lg">Women Empowered</div>
+              <div className="text-lg">Women Empower</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
@@ -201,14 +204,14 @@ export default function Home() {
 
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
               <div className="text-4xl font-bold mb-2 text-brand-blue">
-                200+
+                20+
               </div>
               <div className="text-lg">Industry Partners</div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
               <div className="text-4xl font-bold mb-2 text-brand-pink">50+</div>
-              <div className="text-lg">Countries Reached</div>
+              <div className="text-lg">Courses </div>
             </div>
           </div>
         </div>
@@ -313,7 +316,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-purple-50 px-4 md:px-8">
+      /* <section className="py-20 bg-purple-50 px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">
             Success Stories
@@ -343,7 +346,7 @@ export default function Home() {
                   </div>
                   <p className="text-gray-600 italic">"{story.quote}"</p>
                 </div>
-                <a
+                {/* <a
                   href={`https://${story.company}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -351,12 +354,12 @@ export default function Home() {
                 >
                   <Globe className="w-4 h-4 mr-2" />
                   <span>View Company</span>
-                </a>
+                </a> */}
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </section> 
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white">
@@ -373,9 +376,11 @@ export default function Home() {
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />
             </button>
+            <a href="tel:+251962042225">
             <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-200">
-              Schedule a Call
+              Call
             </button>
+            </a>
           </div>
         </div>
       </section>

@@ -92,35 +92,35 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80" 
+                src="./assets/img/serk.png" 
                 alt="Team member"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
-              <h3 className="text-xl font-semibold mb-2">Dr. Emily Chen</h3>
-              <p className="text-purple-600 mb-4">Founder & CEO</p>
-              <p className="text-gray-600">Former Tech Lead at Google with 15+ years of industry experience.</p>
+              <h3 className="text-xl font-semibold mb-2">Serkalem Delelegn</h3>
+              <p className="text-purple-600 mb-4">Founder </p>
+              <p className="text-gray-600">Software Engineer</p> 
             </div>
             
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" 
+                src="./assets/img/nan.png" 
                 alt="Team member"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
-              <h3 className="text-xl font-semibold mb-2">Sarah Johnson</h3>
-              <p className="text-purple-600 mb-4">Head of Education</p>
-              <p className="text-gray-600">PhD in Computer Science, specialized in AI and Machine Learning.</p>
+              <h3 className="text-xl font-semibold mb-2">Nancy Tesfaye</h3>
+              <p className="text-purple-600 mb-4">Founder</p>
+              <p className="text-gray-600">Software Engineer</p>
             </div>
             
             <div className="text-center">
               <img 
-                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" 
+                src="./assets/img/ezu.png" 
                 alt="Team member"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
-              <h3 className="text-xl font-semibold mb-2">Maria Rodriguez</h3>
-              <p className="text-purple-600 mb-4">Community Director</p>
-              <p className="text-gray-600">10+ years experience in building tech communities and mentorship programs.</p>
+              <h3 className="text-xl font-semibold mb-2">Ezedin Kamil</h3>
+              <p className="text-purple-600 mb-4">Co Founder</p>
+              <p className="text-gray-600">Founder and CEO at Ibex Technologies and Promotion</p>
             </div>
           </div>
         </div>
