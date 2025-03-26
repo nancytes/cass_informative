@@ -28,32 +28,45 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-purple-900 to-blue-800 text-white py-20 px-4 md:px-8 relative text-white">
-      <div className="absolute inset-0 opacity-45" style={{
+      <div className="relative h-[70vh]">
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0" 
+          style={{
             backgroundImage: "url('/assets/img/women2.jpg')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-          }}></div>
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
-            Let's Start Your Journey Together
-          </h1>
-          <p className="text-xl text-purple-100 max-w-2xl mb-8">
-            Whether you're interested in our programs, looking to partner with us, or just want to learn more about Cassiopeia, 
-            we're here to help you take the next step in your tech journey.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <div className="flex items-center space-x-2 text-brand-blue">
-              <Users className="w-5 h-5" />
-              <span>5000+ Women Empowered</span>
-            </div>
-            <div className="flex items-center space-x-2 text-brand-pink">
-              <Globe className="w-5 h-5" />
-              <span>Global Community</span>
-            </div>
-            <div className="flex items-center space-x-2 text-brand-purple">
-              <Heart className="w-5 h-5" />
-              <span>Dedicated Support</span>
+          }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-blue-900/90 opacity-50"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative h-full">
+          <div className="max-w-7xl mx-auto px-4 h-full">
+            <div className="flex flex-col justify-center h-full">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
+                Let's Start Your Journey Together
+              </h1>
+              <p className="text-xl text-white max-w-2xl mb-8 drop-shadow-md">
+                Whether you're interested in our programs, looking to partner with us, or just want to learn more about Cassiopeia, 
+                we're here to help you take the next step in your tech journey.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <Users className="w-5 h-5 text-brand-blue" />
+                  <span className="font-medium text-white">5000+ Women Empowered</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <Globe className="w-5 h-5 text-brand-pink" />
+                  <span className="font-medium text-white">Global Community</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <Heart className="w-5 h-5 text-brand-purple" />
+                  <span className="font-medium text-white">Dedicated Support</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

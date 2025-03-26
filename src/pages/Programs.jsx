@@ -90,47 +90,54 @@ export default function Programs() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-purple-900 via-purple-700 to-blue-800  py-20 px-4 md:px-8 relative text-white">
-      <div className="absolute inset-0 opacity-45" style={{
-            backgroundImage: "url('/assets/img/women2.jpg')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}></div>
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
-                Transform Your Career with Our Programs
-              </h1>
-              <p className="text-xl text-purple-100 mb-8">
-                Industry-aligned curriculum designed to help you master the skills that matter most in today's tech landscape.
-                Learn from experts, build real projects, and join a community of ambitious women in tech.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
-                  <Star className="w-5 h-5 text-brand-pink" />
-                  <span>4.9/5 Student Rating</span>
-                </div>
-                <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
-                  <Users className="w-5 h-5 text-brand-blue" />
-                  <span>5000+ Graduates</span>
-                </div>
-                <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
-                  <Globe className="w-5 h-5 text-brand-purple" />
-                  <span>Global Community</span>
-                </div>
-              </div>
+      <div className="relative h-[75vh] w-full">
+  {/* Background Image with Overlay */}
+  <div 
+    className="absolute inset-0" 
+    style={{
+      backgroundImage: "url('/assets/img/women2.jpg')",
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}
+  >
+    {/* Dark overlay for better text visibility */}
+    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-blue-900/90 opacity-40"></div>
+  </div>
+
+  {/* Content */}
+  <div className="relative h-full w-full">
+    <div className="w-full px-4 h-full">
+      <div className="grid md:grid-cols-2 gap-12 items-center h-full">
+        <div className="text-white">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+            Transform Your Career with Our Programs
+          </h1>
+          <p className="text-xl text-white mb-8 drop-shadow-md">
+            Industry-aligned curriculum designed to help you master the skills that matter most in today's tech landscape.
+            Learn from experts, build real projects, and join a community of ambitious women in tech.
+          </p>
+          <div className="flex flex-wrap gap-4">
+            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+              <Star className="w-5 h-5 text-brand-pink" />
+              <span className="font-medium">4.9/5 Student Rating</span>
             </div>
-            <div className="hidden md:block">
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" 
-                alt="Women in Tech"
-                className="rounded-xl shadow-2xl"
-              />
+            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+              <Users className="w-5 h-5 text-brand-blue" />
+              <span className="font-medium">5000+ Graduates</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+              <Globe className="w-5 h-5 text-brand-purple" />
+              <span className="font-medium">Global Community</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white px-4 md:px-8">

@@ -1,67 +1,92 @@
-import React from 'react';
-import { 
-  ArrowRight, Code, Users, BookOpen, Star, Award, 
-  Sparkles, GraduationCap, Globe, Heart, Target, 
-  CheckCircle, MessageCircle, Laptop, Brain, Shield,
-  Clock
-} from 'lucide-react';
+import React from "react";
+import {
+  ArrowRight,
+  Code,
+  Users,
+  BookOpen,
+  Star,
+  Award,
+  Sparkles,
+  GraduationCap,
+  Globe,
+  Heart,
+  Target,
+  CheckCircle,
+  MessageCircle,
+  Laptop,
+  Brain,
+  Shield,
+  Clock,
+} from "lucide-react";
 
 export default function Home() {
   const successStories = [
     {
       name: "Sarah Chen",
       role: "Senior Software Engineer at Google",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
-      quote: "Cassiopeia transformed my career. The supportive community and practical learning approach helped me land my dream job as a senior developer. The mentorship I received was invaluable.",
-      company: "google.com"
+      image:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
+      quote:
+        "Cassiopeia transformed my career. The supportive community and practical learning approach helped me land my dream job as a senior developer. The mentorship I received was invaluable.",
+      company: "google.com",
     },
     {
       name: "Maria Rodriguez",
       role: "Tech Lead at Microsoft",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
-      quote: "The mentorship and networking opportunities at Cassiopeia were invaluable. I found my voice and confidence in tech leadership. The hands-on projects prepared me for real-world challenges.",
-      company: "microsoft.com"
+      image:
+        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
+      quote:
+        "The mentorship and networking opportunities at Cassiopeia were invaluable. I found my voice and confidence in tech leadership. The hands-on projects prepared me for real-world challenges.",
+      company: "microsoft.com",
     },
     {
       name: "Emily Zhang",
       role: "AI Research Engineer at OpenAI",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80",
-      quote: "The AI & Machine Learning program at Cassiopeia gave me the perfect foundation to pursue my passion in artificial intelligence. The curriculum was cutting-edge and practical.",
-      company: "openai.com"
-    }
+      image:
+        "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80",
+      quote:
+        "The AI & Machine Learning program at Cassiopeia gave me the perfect foundation to pursue my passion in artificial intelligence. The curriculum was cutting-edge and practical.",
+      company: "openai.com",
+    },
   ];
 
   const features = [
     {
       icon: <Code className="w-8 h-8" />,
       title: "Industry-Relevant Curriculum",
-      description: "Our programs are designed in collaboration with tech industry leaders to ensure you learn the most in-demand skills."
+      description:
+        "Our programs are designed in collaboration with tech industry leaders to ensure you learn the most in-demand skills.",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Supportive Community",
-      description: "Join a network of ambitious women who support and inspire each other throughout their tech journey."
+      description:
+        "Join a network of ambitious women who support and inspire each other throughout their tech journey.",
     },
     {
       icon: <BookOpen className="w-8 h-8" />,
       title: "Flexible Learning",
-      description: "Learn at your own pace with our carefully crafted online curriculum and flexible scheduling options."
+      description:
+        "Learn at your own pace with our carefully crafted online curriculum and flexible scheduling options.",
     },
     {
       icon: <GraduationCap className="w-8 h-8" />,
       title: "Expert Mentorship",
-      description: "Get guidance from experienced professionals who have walked the path you're on."
+      description:
+        "Get guidance from experienced professionals who have walked the path you're on.",
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Practical Projects",
-      description: "Build real-world projects that demonstrate your skills and enhance your portfolio."
+      description:
+        "Build real-world projects that demonstrate your skills and enhance your portfolio.",
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Career Support",
-      description: "Receive ongoing career guidance, interview prep, and job placement assistance."
-    }
+      description:
+        "Receive ongoing career guidance, interview prep, and job placement assistance.",
+    },
   ];
 
   return (
@@ -69,28 +94,27 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative min-h-screen px-4">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-700 to-blue-800">
-        <div
+          <div
             className="absolute inset-0 opacity-65"
             style={{
-              backgroundImage: "url('/assets/img/women.jpg')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundImage: "url('/assets/img/women2.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
             }}
           ></div>
         </div>
         <br />
-       
-        
-        
+
         <div className="relative max-w-7xl mx-auto px-4 h-screen flex items-center">
           <div className="grid md:grid-cols-2 gap-1 items-center">
             <div className="text-white">
               <h1 className="text-1xl md:text-5xl font-bold mb-6">
-                Empowering Women 
+                Empowering Women
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-purple-100">
-                Transform your future through accessible and impactful tech education designed for women, by women.
-                Join a community of ambitious learners and industry leaders.
+                Transform your future through accessible and impactful tech
+                education designed for women, by women. Join a community of
+                ambitious learners and industry leaders.
               </p>
               <div className="flex flex-wrap gap-4 mb-8">
                 <div className="flex items-center space-x-2 bg-white/10 px-4 py-2 rounded-full">
@@ -117,8 +141,8 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden md:block">
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" 
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80"
                 alt="Women in Tech"
                 className="rounded-xl shadow-2xl"
               />
@@ -130,16 +154,23 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 px-4 md:px-8">
-          <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Why Choose Cassiopeia?</h2>
-          
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">
+            Why Choose Cassiopeia?
+          </h2>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gradient-to-br from-brand-pink to-brand-purple p-[2px] rounded-xl">
+              <div
+                key={index}
+                className="bg-gradient-to-br from-brand-pink to-brand-purple p-[2px] rounded-xl"
+              >
                 <div className="bg-white p-6 rounded-xl h-full">
                   <div className="bg-gradient-to-br from-brand-pink to-brand-purple w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-white">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold mb-4">
+                    {feature.title}
+                  </h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               </div>
@@ -152,23 +183,29 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-purple-900 to-blue-900 text-white px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16">Our Impact</h2>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
-              <div className="text-4xl font-bold mb-2 text-brand-pink">5000+</div>
+              <div className="text-4xl font-bold mb-2 text-brand-pink">
+                5000+
+              </div>
               <div className="text-lg">Women Empowered</div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
-              <div className="text-4xl font-bold mb-2 text-brand-purple">92%</div>
+              <div className="text-4xl font-bold mb-2 text-brand-purple">
+                92%
+              </div>
               <div className="text-lg">Career Advancement</div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
-              <div className="text-4xl font-bold mb-2 text-brand-blue">200+</div>
+              <div className="text-4xl font-bold mb-2 text-brand-blue">
+                200+
+              </div>
               <div className="text-lg">Industry Partners</div>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center">
               <div className="text-4xl font-bold mb-2 text-brand-pink">50+</div>
               <div className="text-lg">Countries Reached</div>
@@ -180,14 +217,21 @@ export default function Home() {
       {/* Programs Preview */}
       <section className="py-20 bg-white px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Featured Programs</h2>
-          
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">
+            Featured Programs
+          </h2>
+
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-brand-pink to-brand-purple p-[2px] rounded-xl">
               <div className="bg-white p-6 rounded-xl h-full">
                 <Code className="w-12 h-12 text-brand-purple mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Full-Stack Development</h3>
-                <p className="text-gray-600 mb-6">Master modern web development with JavaScript, React, Node.js, and more.</p>
+                <h3 className="text-xl font-semibold mb-4">
+                  Full-Stack Development
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Master modern web development with JavaScript, React, Node.js,
+                  and more.
+                </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center space-x-2 text-gray-700">
                     <CheckCircle className="w-5 h-5 text-brand-purple" />
@@ -211,8 +255,13 @@ export default function Home() {
             <div className="bg-gradient-to-br from-brand-purple to-brand-blue p-[2px] rounded-xl">
               <div className="bg-white p-6 rounded-xl h-full">
                 <Brain className="w-12 h-12 text-brand-purple mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Data Science & AI</h3>
-                <p className="text-gray-600 mb-6">Learn to analyze data and build ML models using Python and popular frameworks.</p>
+                <h3 className="text-xl font-semibold mb-4">
+                  Data Science & AI
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Learn to analyze data and build ML models using Python and
+                  popular frameworks.
+                </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center space-x-2 text-gray-700">
                     <CheckCircle className="w-5 h-5 text-brand-purple" />
@@ -237,7 +286,9 @@ export default function Home() {
               <div className="bg-white p-6 rounded-xl h-full">
                 <Shield className="w-12 h-12 text-brand-purple mb-4" />
                 <h3 className="text-xl font-semibold mb-4">Cybersecurity</h3>
-                <p className="text-gray-600 mb-6">Learn to protect systems and networks from digital attacks.</p>
+                <p className="text-gray-600 mb-6">
+                  Learn to protect systems and networks from digital attacks.
+                </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center space-x-2 text-gray-700">
                     <CheckCircle className="w-5 h-5 text-brand-purple" />
@@ -264,19 +315,23 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="py-20 bg-purple-50 px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Success Stories</h2>
-          
+          <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">
+            Success Stories
+          </h2>
+
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-8">
                 <div className="flex items-center mb-6">
-                  <img 
+                  <img
                     src={story.image}
                     alt={story.name}
                     className="w-16 h-16 rounded-full object-cover mr-4"
                   />
                   <div>
-                    <h3 className="font-semibold text-gray-800">{story.name}</h3>
+                    <h3 className="font-semibold text-gray-800">
+                      {story.name}
+                    </h3>
                     <p className="text-brand-purple text-sm">{story.role}</p>
                   </div>
                 </div>
@@ -288,7 +343,7 @@ export default function Home() {
                   </div>
                   <p className="text-gray-600 italic">"{story.quote}"</p>
                 </div>
-                <a 
+                <a
                   href={`https://${story.company}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -306,10 +361,12 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Begin Your Tech Journey?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Begin Your Tech Journey?
+          </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of women who have transformed their careers through our programs.
-            Take the first step towards your future in tech today.
+            Join thousands of women who have transformed their careers through
+            our programs. Take the first step towards your future in tech today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-white text-brand-purple px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-200 font-semibold flex items-center space-x-2">
