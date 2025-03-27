@@ -79,7 +79,7 @@ export default function About() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-screen ">
+      <div className="relative h-[75vh] px-4 md:px-8 ">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 " 
@@ -96,37 +96,27 @@ export default function About() {
         {/* Content */}
         <div className="relative h-full">
           <div className="max-w-7xl mx-auto px-4 h-full">
-            <div className="grid md:grid-cols-2 gap-12 items-center h-full">
-              <div className="text-white">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
-                  Transforming Tech Education for Women
-                </h1>
-                <p className="text-xl text-white mb-8 drop-shadow-md">
-                  We're on a mission to create a more diverse and inclusive tech industry by empowering women 
+            <div className="flex flex-col justify-center h-full">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
+              Transforming Tech Education for Women
+              </h1>
+              <p className="text-xl text-white max-w-2xl mb-8 drop-shadow-md">
+              We're on a mission to create a more diverse and inclusive tech industry by empowering women 
                   through education, community, and opportunity.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                    <Star className="w-5 h-5 text-yellow-300" />
-                    <span className="font-medium">Award-Winning Programs</span>
-                  </div>
-                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                    <Globe className="w-5 h-5 text-blue-300" />
-                    <span className="font-medium">Global Impact</span>
-                  </div>
-                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-                    <Users className="w-5 h-5 text-purple-300" />
-                    <span className="font-medium">Diverse Community</span>
-                  </div>
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <Users className="w-5 h-5 text-brand-blue" />
+                  <span className="font-medium text-white">Award-Winning Programs</span>
                 </div>
-              </div>
-              
-              <div className="hidden md:block">
-                <img 
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80" 
-                  alt="Team Collaboration"
-                  className="rounded-xl shadow-2xl border-4 border-white/20 backdrop-blur-sm"
-                />
+                <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <Globe className="w-5 h-5 text-brand-pink" />
+                  <span className="font-medium text-white">Global Impact</span>
+                </div>
+                <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                  <Heart className="w-5 h-5 text-brand-purple" />
+                  <span className="font-medium text-white">Diverse Community</span>
+                </div>
               </div>
             </div>
           </div>

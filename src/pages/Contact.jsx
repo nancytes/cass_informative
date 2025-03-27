@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[70vh]">
+      <div className="relative h-[75vh] px-4 md:px-8">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0" 
@@ -39,7 +39,7 @@ export default function Contact() {
           }}
         >
           {/* Dark overlay for better text visibility */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-blue-900/90 opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-blue-900/90 opacity-40"></div>
         </div>
 
         {/* Content */}

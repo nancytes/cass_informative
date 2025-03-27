@@ -90,7 +90,7 @@ export default function Programs() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[75vh] w-full">
+      <div className="relative h-[75vh] w-full px-4 md:px-6 pt-5">
   {/* Background Image with Overlay */}
   <div 
     className="absolute inset-0" 
@@ -106,17 +106,17 @@ export default function Programs() {
 
   {/* Content */}
   <div className="relative h-full w-full">
-    <div className="w-full px-4 h-full">
-      <div className="grid md:grid-cols-2 gap-12 items-center h-full">
+    <div className="px-4 h-full w-full">
+      <div className="grid grid-cols-1 gap-12 items-center  h-full">
         <div className="text-white">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
-            Transform Your Career with Our Programs
+            Transform Your Career with <br /> Our Programs
           </h1>
           <p className="text-xl text-white mb-8 drop-shadow-md">
-            Industry-aligned curriculum designed to help you master the skills that matter most in today's tech landscape.
-            Learn from experts, build real projects, and join a community of ambitious women in tech.
+            Industry-aligned curriculum designed to help you master the skills that matter most in  <br /> today's tech landscape.
+            Learn from experts, build real projects, and join a community  <br /> of ambitious women in tech.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 ">
             <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
               <Star className="w-5 h-5 text-brand-pink" />
               <span className="font-medium">4.9/5 Student Rating</span>
@@ -135,6 +135,7 @@ export default function Programs() {
     </div>
   </div>
 </div>
+
 
 
 
