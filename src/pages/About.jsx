@@ -33,22 +33,22 @@ export default function About() {
     {
       number: "500+",
       label: "Students",
-      description: "Successfully completed our programs"
+      description: "Will join our program"
     },
     {
-      number: "92%",
+      number: "90%",
       label: "Success Rate",
-      description: "Of graduates advance their careers"
+      description: "will graduate from us"
     },
     {
-      number: "20+",
+      number: "10+",
       label: "Partners",
-      description: "Industry-leading tech companies"
+      description: "Industry leading tech companies"
     },
     {
-      number: "50+",
+      number: "15+",
       label: "Courses",
-      description: "Global community reach"
+      description: "Software Courses"
     }
   ];
 

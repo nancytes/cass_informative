@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { 
   Code, Terminal, Database, Cloud, Brain, Shield, 
   GraduationCap, Users, BookOpen, Star, Award, 

@@ -117,10 +117,8 @@ export default function Footer() {
                   href="mailto:membership@cassiopeiatech.org"
                   className="hover:text-white"
                 >
-                  info@cassiopeiatech.org <br></br>
-                  serkalem@cassiopeiatech.org <br></br>
-                  nancy@cassiopeiatech.org <br></br>
-                  ezedin@cassiopeiatech.org
+                  info@cassiopeiatech.org 
+                  
                 </a>
               </li>
               <li className="flex items-center text-purple-100">
