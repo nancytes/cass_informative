@@ -6,7 +6,6 @@ import {
   GraduationCap, Users, BookOpen, Star, Award, 
   Laptop, Clock, CheckCircle, ArrowRight, Globe 
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 
 export default function Programs() {

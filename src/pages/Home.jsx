@@ -142,7 +142,7 @@ export default function Home() {
             </div>
             <div className="hidden md:block">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80"
+                src="./assets/img/cass3.png"
                 alt="Women in Tech"
                 className="rounded-xl shadow-2xl"
               />
