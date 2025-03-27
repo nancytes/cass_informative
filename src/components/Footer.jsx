@@ -1,16 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Sparkles,
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  ArrowRight,
+
+import { 
+  Sparkles, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Linkedin, 
+  Instagram, 
+  ArrowRight 
 } from "lucide-react";
+import { FaTelegram } from "react-icons/fa";
+
 
 export default function Footer() {
   return (
@@ -33,30 +36,32 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61564889536858"
                 className="text-purple-300 hover:text-white transition-colors"
               >
                 <Facebook className="w-5 h-5" />
               </a>
+              <a href="https://t.me/cassiopeiagirlstech"
+   className="text-purple-300 hover:text-white transition-colors">
+  <FaTelegram className="w-5 h-5" />
+</a>
+
               <a
-                href="#"
-                className="text-purple-300 hover:text-white transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/cassiopeia-girls-tech/"
                 className="text-purple-300 hover:text-white transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/cassiopeiatech"
                 className="text-purple-300 hover:text-white transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-            </div>
+            </div>"
+
+
+
           </div>
 
           {/* Quick Links */}
@@ -112,13 +117,17 @@ export default function Footer() {
                   href="mailto:membership@cassiopeiatech.org"
                   className="hover:text-white"
                 >
-                  membership@cassiopeiatech.org
+                  info@cassiopeiatech.org <br></br>
+                  serkalem@cassiopeiatech.org <br></br>
+                  nancy@cassiopeiatech.org <br></br>
+                  ezedin@cassiopeiatech.org
                 </a>
               </li>
               <li className="flex items-center text-purple-100">
                 <Phone className="w-5 h-5 mr-3 text-purple-300" />
                 <a href="tel:+1234567890" className="hover:text-white">
-                +251 (969) 870-922
+                +251 (969) 870-922 <br></br>
+                +251 (962) 042-225
                 </a>
               </li>
               {/* <li className="flex items-start text-purple-100">

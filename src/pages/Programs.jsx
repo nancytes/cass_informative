@@ -4,6 +4,8 @@ import {
   GraduationCap, Users, BookOpen, Star, Award, 
   Laptop, Clock, CheckCircle, ArrowRight, Globe 
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 
 export default function Programs() {
   const programs = [
@@ -284,9 +286,11 @@ export default function Programs() {
             <button className="bg-white text-brand-purple px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-200 font-semibold">
               Apply Now
             </button>
+            <Link to="/Contact">
             <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-200">
-              Schedule a Call
+             Call
             </button>
+            </Link>
           </div>
         </div>
       </section>

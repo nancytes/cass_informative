@@ -31,8 +31,8 @@ export default function About() {
 
   const achievements = [
     {
-      number: "5000+",
-      label: "Graduates",
+      number: "500+",
+      label: "Students",
       description: "Successfully completed our programs"
     },
     {
@@ -41,38 +41,41 @@ export default function About() {
       description: "Of graduates advance their careers"
     },
     {
-      number: "200+",
+      number: "20+",
       label: "Partners",
       description: "Industry-leading tech companies"
     },
     {
       number: "50+",
-      label: "Countries",
+      label: "Courses",
       description: "Global community reach"
     }
   ];
 
   const teamMembers = [
     {
-      name: "Dr. Emily Chen",
-      role: "Founder & CEO",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80",
-      bio: "Former Tech Lead at Google with 15+ years of industry experience.",
-      expertise: ["Tech Leadership", "AI/ML", "Product Strategy"]
+      name: "Serkalem Delelegn",
+      role: "Founder",
+      image: "./assets/img/serk.png",
+      bio: "Serkalem Delegn is a Software Engineer with expertise in full-stack development. She is skilled in JavaScript, Node.js and React. Serkalem is passionate about creating user-friendly web applications and empowering women in tech through initiatives like Cassiopia Girls Tech",
+      expertise: ["Software Engineer", "serkalem@cassiopeiatech.org "]
     },
     {
-      name: "Sarah Johnson",
-      role: "Head of Education",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80",
-      bio: "PhD in Computer Science, specialized in AI and Machine Learning.",
-      expertise: ["Computer Science", "Education", "Research"]
+      name: "Nancy Tesfaye",
+      role: "Founder",
+      image: "./assets/img/nan.png",
+      bio: "Nancy Tesfaye is a Software Engineer specializing in fullstack development. She is proficient in React, Node.js and CSS. She is committed to building impactful applications and supporting women in tech through Cassiopia Girls Tech.",
+      expertise: [
+        "Software Engineer",
+        "nancy@cassiopeiatech.org"
+      ]
     },
     {
-      name: "Maria Rodriguez",
-      role: "Community Director",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80",
-      bio: "10+ years experience in building tech communities and mentorship programs.",
-      expertise: ["Community Building", "Mentorship", "DEI"]
+      name: "Ezedin Kamil",
+      role: "Co-Founder",
+      image: "./assets/img/ezu.png",
+      bio: "Ezedin Kamil is an Ethiopian innovator and entrepreneur. He specializes in hardware innovation, renewable energy and digital transformation developing cutting-edge solutions to drive technological progress. His work in electric mobility and smart technologies has earned him multiple awards and recognition.",
+      expertise: ["CEO of Ibex Technologies, Hex Labs Technologies and Tina Mart" , "ezedin@cassiopeiatech.org"]
     }
   ];
 
