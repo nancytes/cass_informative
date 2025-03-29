@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef  } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Building2, GraduationCap, Briefcase, Heart, Globe } from 'lucide-react';
 
 export default function Contact() {
@@ -23,6 +24,25 @@ export default function Contact() {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_g9yit6r', 'template_wudmh5q', form.current, {
+        publicKey: 'W_7wxBZgRvlSByQ_o',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   return (
@@ -175,7 +195,7 @@ export default function Contact() {
                   We're excited to hear from you and learn how we can help you achieve your tech goals.
                 </p>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={form} onSubmit={sendEmail} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
