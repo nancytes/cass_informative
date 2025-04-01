@@ -129,7 +129,7 @@ export default function Contact() {
       </div>
 
       {/* Main Contact Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-4 md:px-8">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
