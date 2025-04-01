@@ -9,25 +9,19 @@ import {
 export default function Community() {
   const upcomingEvents = [
     {
-      //date: "MAR 15, 2025",
       title: "Tech Leadership Workshop",
       description: "Virtual workshop on developing leadership skills in tech.",
       type: "Virtual",
-      //time: "10:00 AM - 2:00 PM PST"
     },
     {
-     // date: "MAR 22, 2025",
       title: "Code Review Session",
       description: "Peer code review and best practices discussion.",
       type: "Online",
-      //time: "1:00 PM - 3:00 PM PST"
     },
     {
-     // date: "MAR 29, 2025",
       title: "Career Fair",
       description: "Virtual networking event with top tech companies.",
       type: "Virtual",
-      //time: "9:00 AM - 5:00 PM PST"
     }
   ];
 
@@ -35,25 +29,26 @@ export default function Community() {
     {
       icon: <Code className="w-6 h-6" />,
       name: "Web Development",
-      //members: "2,500+",
       description: "Connect with fellow web developers, share knowledge, and collaborate on projects."
     },
     {
       icon: <Database className="w-6 h-6" />,
       name: "Data Science",
-      //members: "1,800+",
       description: "Discuss data analysis, machine learning, and AI with passionate data scientists."
     },
     {
       icon: <Cloud className="w-6 h-6" />,
       name: "Cloud Computing",
-      //members: "1,500+",
       description: "Exchange cloud architecture best practices and stay updated with latest trends."
     }
   ];
 
+  const handleRegisterClick = () => {
+    window.open("https://t.me/Nandy1", "_blank");
+  };
+
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[75vh] px-4 md:px-8">
         {/* Background Image with Overlay */}
@@ -74,11 +69,11 @@ export default function Community() {
           <div className="max-w-7xl mx-auto px-4 h-full">
             <div className="flex flex-col justify-center h-full">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">
-              Join Our Global Tech Community
+                Join Our Global Tech Community
               </h1>
               <p className="text-xl text-white max-w-2xl mb-8 drop-shadow-md">
-              Connect with like-minded women in tech, share experiences, and grow together in a supportive environment.
-              Be part of a movement that's transforming the tech industry.
+                Connect with like-minded women in tech, share experiences, and grow together in a supportive environment.
+                Be part of a movement that's transforming the tech industry.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
@@ -210,8 +205,12 @@ export default function Community() {
                       <span>{event.time}</span>
                     </div>
                   </div>
-                  <button className="mt-6 w-full bg-gradient-to-r from-brand-pink to-brand-purple text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200">
-                    Register Now
+                  <button 
+                    onClick={handleRegisterClick}
+                    className="mt-6 w-full bg-gradient-to-r from-brand-pink to-brand-purple text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200 flex items-center justify-center gap-2"
+                  >
+                    <span>Register Now</span>
+                    <Send className="w-4 h-4" />
                   </button>
                 </div>
               </div>
@@ -248,27 +247,6 @@ export default function Community() {
           </div>
         </div>
       </section>
-
-      {/* Join Community CTA */}
-      {/* <section className="py-20 bg-white px-4 md:px-8">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue rounded-2xl p-12 text-white text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Be part of a supportive network of women in tech. Share experiences, learn from peers, and grow together.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-brand-purple px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-200 font-semibold flex items-center space-x-2">
-                <span>Join Now</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-200">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Code,
@@ -131,13 +132,19 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-white text-brand-purple px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition duration-300 flex items-center space-x-2">
+                <Link
+                  to="/programs"
+                  className="bg-white text-brand-purple px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition duration-300 flex items-center space-x-2"
+                >
                   <span>Explore Programs</span>
                   <ArrowRight className="w-5 h-5" />
-                </button>
-                <button className="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition duration-300">
+                </Link>
+                <Link
+                  to="/community"
+                  className="bg-transparent border-2 border-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition duration-300"
+                >
                   Join Community
-                </button>
+                </Link>
               </div>
             </div>
             <div className="hidden md:block">
@@ -246,9 +253,12 @@ export default function Home() {
                     <span>Industry mentorship</span>
                   </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-brand-pink to-brand-purple text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200">
+                <Link
+                  to="/programs"
+                  className="block w-full bg-gradient-to-r from-brand-pink to-brand-purple text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200 text-center"
+                >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -276,9 +286,12 @@ export default function Home() {
                     <span>Career coaching</span>
                   </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-brand-purple to-brand-blue text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200">
+                <Link
+                  to="/programs"
+                  className="block w-full bg-gradient-to-r from-brand-pink to-brand-purple text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200 text-center"
+                >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -303,9 +316,12 @@ export default function Home() {
                     <span>Certification prep</span>
                   </li>
                 </ul>
-                <button className="w-full bg-gradient-to-r from-brand-blue to-brand-pink text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200">
+                <Link
+                  to="/programs"
+                  className="block w-full bg-gradient-to-r from-brand-pink to-brand-purple text-white py-2 rounded-lg hover:opacity-90 transition-all duration-200 text-center"
+                >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -368,15 +384,19 @@ export default function Home() {
             our programs. Take the first step towards your future in tech today.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-brand-purple px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-200 font-semibold flex items-center space-x-2">
+            <Link
+              to="/contact"
+              className="bg-white text-brand-purple px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-200 font-semibold flex items-center space-x-2"
+            >
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
-            <a href="tel:+251962042225">
-            <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-200">
+            </Link>
+            <Link
+              to="tel:+1234567890"
+              className="bg-transparent border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-200"
+            >
               Call
-            </button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

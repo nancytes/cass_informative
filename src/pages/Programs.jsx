@@ -1,14 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
 import { 
   Code, Terminal, Database, Cloud, Brain, Shield, 
   GraduationCap, Users, BookOpen, Star, Award, 
-  Laptop, Clock, CheckCircle, ArrowRight, Globe 
+  Laptop, Clock, CheckCircle, ArrowRight, Globe,
+  X 
 } from 'lucide-react';
 
+// Modal Component
+function ProgramModal({ program, isOpen, onClose }) {
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue p-6 text-white relative">
+          <button 
+            onClick={onClose}
+            className="absolute top-4 right-4 text-white hover:text-gray-200 transition-colors"
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <div className="bg-white/10 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
+            {program.icon}
+          </div>
+          <h3 className="text-2xl font-semibold mb-2">{program.title}</h3>
+          <div className="flex items-center space-x-2 text-sm">
+            <Clock className="w-4 h-4" />
+            <span>{program.duration}</span>
+            <span className="mx-2">•</span>
+            <span>{program.level}</span>
+          </div>
+        </div>
+        
+        <div className="p-6">
+          <h4 className="text-lg font-semibold mb-4">Program Overview</h4>
+          <p className="text-gray-600 mb-6">{program.description}</p>
+          
+          <h4 className="text-lg font-semibold mb-4">What You'll Learn</h4>
+          <div className="space-y-3 mb-6">
+            {program.highlights.map((highlight, i) => (
+              <div key={i} className="flex items-center space-x-2 text-gray-700">
+                <CheckCircle className="w-5 h-5 text-brand-purple" />
+                <span>{highlight}</span>
+              </div>
+            ))}
+          </div>
+
+          <h4 className="text-lg font-semibold mb-4">Program Details</h4>
+          <div className="space-y-2 mb-6">
+            <p className="text-gray-600"><strong>Duration:</strong> {program.duration}</p>
+            <p className="text-gray-600"><strong>Level:</strong> {program.level}</p>
+            <p className="text-gray-600"><strong>Format:</strong> Online / Hybrid</p>
+            <p className="text-gray-600"><strong>Next Batch:</strong> Enrolling Now</p>
+          </div>
+
+          <div className="flex gap-4">
+            <Link 
+              to="/contact"
+              className="flex-1 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-200 text-center"
+            >
+              Apply Now
+            </Link>
+            <button 
+              onClick={onClose}
+              className="flex-1 border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-lg hover:bg-gray-50 transition-all duration-200"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function Programs() {
+  const [selectedProgram, setSelectedProgram] = useState(null);
+
   const programs = [
     {
       icon: <Code className="w-8 h-8" />,
@@ -94,54 +163,50 @@ export default function Programs() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[75vh] w-full px-4 md:px-6 pt-5">
-  {/* Background Image with Overlay */}
-  <div 
-    className="absolute inset-0" 
-    style={{
-      backgroundImage: "url('/assets/img/women2.jpg')",
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}
-  >
-    {/* Dark overlay for better text visibility */}
-    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-blue-900/90 opacity-40"></div>
-  </div>
+        {/* Background Image with Overlay */}
+        <div 
+          className="absolute inset-0" 
+          style={{
+            backgroundImage: "url('/assets/img/women2.jpg')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/90 via-purple-800/85 to-blue-900/90 opacity-40"></div>
+        </div>
 
-  {/* Content */}
-  <div className="relative h-full w-full">
-    <div className="px-4 h-full w-full">
-      <div className="grid grid-cols-1 gap-12 items-center  h-full">
-        <div className="text-white">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
-            Transform Your Career with <br /> Our Programs
-          </h1>
-          <p className="text-xl text-white mb-8 drop-shadow-md">
-            Industry-aligned curriculum designed to help you master the skills that matter most in  <br /> today's tech landscape.
-            Learn from experts, build real projects, and join a community  <br /> of ambitious women in tech.
-          </p>
-          <div className="flex flex-wrap gap-4 ">
-            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <Star className="w-5 h-5 text-brand-pink" />
-              <span className="font-medium">4.9/5 Student Rating</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <Users className="w-5 h-5 text-brand-blue" />
-              <span className="font-medium">5000+ Graduates</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-              <Globe className="w-5 h-5 text-brand-purple" />
-              <span className="font-medium">Global Community</span>
+        {/* Content */}
+        <div className="relative h-full w-full">
+          <div className="px-4 h-full w-full">
+            <div className="grid grid-cols-1 gap-12 items-center h-full">
+              <div className="text-white">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+                  Transform Your Career with <br /> Our Programs
+                </h1>
+                <p className="text-xl text-white mb-8 drop-shadow-md">
+                  Industry-aligned curriculum designed to help you master the skills that matter most in <br /> today's tech landscape.
+                  Learn from experts, build real projects, and join a community <br /> of ambitious women in tech.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                    <Star className="w-5 h-5 text-brand-pink" />
+                    <span className="font-medium">4.9/5 Student Rating</span>
+                  </div>
+                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                    <Users className="w-5 h-5 text-brand-blue" />
+                    <span className="font-medium">5000+ Graduates</span>
+                  </div>
+                  <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                    <Globe className="w-5 h-5 text-brand-purple" />
+                    <span className="font-medium">Global Community</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-
 
       {/* Why Choose Us */}
       <section className="py-20 bg-white px-4 md:px-8">
@@ -222,7 +287,10 @@ export default function Programs() {
                       </div>
                     ))}
                   </div>
-                  <button className="mt-8 w-full bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-200 flex items-center justify-center space-x-2">
+                  <button 
+                    onClick={() => setSelectedProgram(program)}
+                    className="mt-8 w-full bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-200 flex items-center justify-center space-x-2"
+                  >
                     <span>Learn More</span>
                     <ArrowRight className="w-5 h-5" />
                   </button>
@@ -275,26 +343,12 @@ export default function Programs() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of women who have transformed their careers through our programs.
-            Take the first step towards your future in tech today.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white text-brand-purple px-8 py-3 rounded-lg hover:bg-opacity-90 transition-colors duration-200 font-semibold">
-              Apply Now
-            </button>
-            <Link to="/Contact">
-            <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors duration-200">
-             Call
-            </button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Modal */}
+      <ProgramModal 
+        program={selectedProgram} 
+        isOpen={selectedProgram !== null}
+        onClose={() => setSelectedProgram(null)}
+      />
     </div>
   );
 }

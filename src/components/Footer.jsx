@@ -35,12 +35,12 @@ export default function Footer() {
               education, community, and innovation.
             </p>
             <div className="flex space-x-4">
-              <a
+              {/* <a
                 href="https://www.facebook.com/profile.php?id=61564889536858"
                 className="text-purple-300 hover:text-white transition-colors"
               >
                 <Facebook className="w-5 h-5" />
-              </a>
+              </a> */}
               <a href="https://t.me/cassiopeiagirlstech"
    className="text-purple-300 hover:text-white transition-colors">
   <FaTelegram className="w-5 h-5" />
@@ -58,7 +58,7 @@ export default function Footer() {
               >
                 <Instagram className="w-5 h-5" />
               </a>
-            </div>"
+            </div>
 
 
 
@@ -95,7 +95,7 @@ export default function Footer() {
                   About Us
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   to="#"
                   className="text-purple-100 hover:text-white flex items-center"
@@ -103,7 +103,7 @@ export default function Footer() {
                   <ArrowRight className="w-4 h-4 mr-2" />
                   Success Stories
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
