@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "cassiopeia-website": "file:",
     "lucide-react": "^0.344.0",
     "next": "^15.2.4",
