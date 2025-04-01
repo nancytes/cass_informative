@@ -30,15 +30,7 @@ export default function Contact() {
     try {
       setIsSubmitting(true);
       setSubmitStatus({ message: 'Sending message...', isError: false });
-
-      // const result = await emailjs.sendForm(
-      //   'service_g9yit6r',
-      //   'template_5133nxi',
-      //   formRef.current,
-      //   'W_7wxBZgRvlSByQ_o'
-      // );
-     
-
+      
       const result = await emailjs.sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -180,14 +172,14 @@ export default function Contact() {
                       <Users className="w-5 h-5" />
                       <span>Community</span>
                     </Link>
-                    <Link to="/careers" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
+                    {/* <Link to="/careers" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
                       <Building2 className="w-5 h-5" />
                       <span>Careers</span>
                     </Link>
                     <Link to="/partners" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
                       <Briefcase className="w-5 h-5" />
                       <span>Partners</span>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

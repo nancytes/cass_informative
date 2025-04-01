@@ -123,11 +123,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-purple-100">
                 <Phone className="w-5 h-5 mr-3 text-purple-300" />
-                <a href="tel:+1234567890" className="hover:text-white">
-                +251 (969) 870-922 <br></br>
-                +251 (962) 042-225
-                </a>
+                <a href="tel:+251969870922" className="text-brand-white block hover:text-brand-pink transition-colors">
+                        +251 (969) 870-922
+                        <br />
+                      </a>
+                     
+                     
               </li>
+              
               {/* <li className="flex items-start text-purple-100">
                 <MapPin className="w-5 h-5 mr-3 text-purple-300 mt-1" />
                 <span>

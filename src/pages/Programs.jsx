@@ -57,8 +57,9 @@ function ProgramModal({ program, isOpen, onClose }) {
 
           <div className="flex gap-4">
             <Link 
-              to="/contact"
+              to="https://t.me/CassiopeiaGTBot"
               className="flex-1 bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-200 text-center"
+              
             >
               Apply Now
             </Link>

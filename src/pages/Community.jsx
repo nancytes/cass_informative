@@ -44,7 +44,7 @@ export default function Community() {
   ];
 
   const handleRegisterClick = () => {
-    window.open("https://t.me/Nandy1", "_blank");
+    window.open("https://t.me/CassiopeiaGTBot", "_blank");
   };
 
   return (
