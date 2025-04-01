@@ -1,12 +1,12 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Building2, GraduationCap, Briefcase, Heart, Globe } from 'lucide-react';
+import { Mail, Phone, Send, Users, Building2, GraduationCap, Briefcase, Heart, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     phone: '',
     organization: '',
     subject: '',
@@ -14,50 +14,76 @@ export default function Contact() {
     interest: 'general'
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({
     message: '',
     isError: false
   });
 
-  const form = useRef();
+  const formRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitStatus({ message: 'Sending...', isError: false });
+    
+    if (isSubmitting) return;
 
-    emailjs
-      .sendForm('service_g9yit6r', 'template_wudmh5q', form.current, {
-        publicKey: 'W_7wxBZgRvlSByQ_o',
-      })
-      .then(
-        () => {
-          setSubmitStatus({ message: 'Message sent successfully!', isError: false });
-          setFormData({
-            name: '',
-            email: '',
-            phone: '',
-            organization: '',
-            subject: '',
-            message: '',
-            interest: 'general'
-          });
-        },
-        (error) => {
-          setSubmitStatus({ message: 'Failed to send message. Please try again.', isError: true });
-          console.error('Failed...', error.text);
-        },
+    try {
+      setIsSubmitting(true);
+      setSubmitStatus({ message: 'Sending message...', isError: false });
+
+      // const result = await emailjs.sendForm(
+      //   'service_g9yit6r',
+      //   'template_5133nxi',
+      //   formRef.current,
+      //   'W_7wxBZgRvlSByQ_o'
+      // );
+     
+
+      const result = await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
+      
+
+      
+      if (result.text === 'OK') {
+        setSubmitStatus({ message: 'Message sent successfully!', isError: false });
+        setFormData({
+          user_name: '',
+          user_email: '',
+          phone: '',
+          organization: '',
+          subject: '',
+          message: '',
+          interest: 'general'
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus({
+        message: 'Failed to send message. Please try again.',
+        isError: true
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
   return (
     <div className="min-h-screen">
+      
       {/* Hero Section */}
       <div className="relative h-[75vh] px-4 md:px-8">
         {/* Background Image with Overlay */}
@@ -154,14 +180,14 @@ export default function Contact() {
                       <Users className="w-5 h-5" />
                       <span>Community</span>
                     </Link>
-                    {/* <Link to="/careers" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
+                    <Link to="/careers" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
                       <Building2 className="w-5 h-5" />
                       <span>Careers</span>
                     </Link>
                     <Link to="/partners" className="flex items-center space-x-2 text-gray-600 hover:text-brand-purple transition-colors">
                       <Briefcase className="w-5 h-5" />
                       <span>Partners</span>
-                    </Link> */}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -177,22 +203,26 @@ export default function Contact() {
                 </p>
                 
                 {submitStatus.message && (
-                  <div className={`mb-6 p-4 rounded-lg ${submitStatus.isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'}`}>
+                  <div 
+                    className={`mb-6 p-4 rounded-lg ${
+                      submitStatus.isError ? 'bg-red-100 text-red-700' : 'bg-green-100 text-green-700'
+                    }`}
+                  >
                     {submitStatus.message}
                   </div>
                 )}
 
-                <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="user_name" className="block text-sm font-medium text-gray-700 mb-1">
                         Full Name
                       </label>
                       <input
                         type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
+                        id="user_name"
+                        name="user_name"
+                        value={formData.user_name}
                         onChange={handleChange}
                         className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all duration-200"
                         placeholder="Aberash Debe"
@@ -201,14 +231,14 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="user_email" className="block text-sm font-medium text-gray-700 mb-1">
                         Email Address
                       </label>
                       <input
                         type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
+                        id="user_email"
+                        name="user_email"
+                        value={formData.user_email}
                         onChange={handleChange}
                         className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all duration-200"
                         placeholder="aberash@example.com"
@@ -294,7 +324,7 @@ export default function Contact() {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      rows="6"
+                      rows={6}
                       className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-purple focus:border-transparent transition-all duration-200"
                       placeholder="Tell us how we can help you..."
                       required
@@ -303,10 +333,13 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white py-3 px-6 rounded-lg hover:opacity-90 transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                    disabled={isSubmitting}
+                    className={`w-full bg-gradient-to-r from-brand-pink via-brand-purple to-brand-blue text-white py-3 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 shadow-lg ${
+                      isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:opacity-90 hover:shadow-xl'
+                    }`}
                   >
                     <Send className="w-5 h-5" />
-                    <span>Send Message</span>
+                    <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   </button>
                 </form>
               </div>
@@ -314,6 +347,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-      </div>
+    </div>
   );
 }
