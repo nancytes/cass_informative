@@ -86,7 +86,7 @@ export default function About() {
 
       {/* Team Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4" >
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Leadership Team</h2>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -112,7 +112,7 @@ export default function About() {
               <p className="text-gray-600">Software Engineer</p>
             </div>
             
-            <div className="text-center">
+            {/* <div className="text-center">
               <img 
                 src="./assets/img/ezu.png" 
                 alt="Team member"
@@ -121,7 +121,7 @@ export default function About() {
               <h3 className="text-xl font-semibold mb-2">Ezedin Kamil</h3>
               <p className="text-purple-600 mb-4">Co Founder</p>
               <p className="text-gray-600">Founder and CEO at Ibex Technologies and Promotion</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

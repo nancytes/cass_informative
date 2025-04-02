@@ -70,13 +70,13 @@ export default function About() {
         "nancy@cassiopeiatech.org"
       ]
     },
-    {
-      name: "Ezedin Kamil",
-      role: "Co-Founder",
-      image: "./assets/img/ezu.png",
-      bio: "Ezedin Kamil is an Ethiopian innovator and entrepreneur. He specializes in hardware innovation, renewable energy and digital transformation developing cutting-edge solutions to drive technological progress. His work in electric mobility and smart technologies has earned him multiple awards and recognition.",
-      expertise: ["CEO of Ibex Technologies, Hex Labs Technologies and Tina Mart" , "ezedin@cassiopeiatech.org"]
-    }
+    // {
+    //   name: "Ezedin Kamil",
+    //   role: "Co-Founder",
+    //   image: "./assets/img/ezu.png",
+    //   bio: "Ezedin Kamil is an Ethiopian innovator and entrepreneur. He specializes in hardware innovation, renewable energy and digital transformation developing cutting-edge solutions to drive technological progress. His work in electric mobility and smart technologies has earned him multiple awards and recognition.",
+    //   expertise: ["CEO of Ibex Technologies, Hex Labs Technologies and Tina Mart" , "ezedin@cassiopeiatech.org"]
+    // }
   ];
 
   return (
